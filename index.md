@@ -1,5 +1,9 @@
 # Welcome
 
+<!-- Her kan du skrive tekst som kommer i toppen af siden -->
+
+
+<!-- Niks pille, med mindre du ved hvad du gør! -->
 <div id="imageshere" />
 <script>
   var url = "https://raw.githubusercontent.com/tofteapp/imageapp/master/";
@@ -17,4 +21,11 @@
       document.getElementById("imageshere").appendChild(document.createElement("BR"));
     }
   }
+  
+  // remove head and footer:
+  document.getElementsByClassName("page-header")[0].hidden = true;
+  document.getElementsByClassName("site-footer")[0].hidden = true;
 </script>
+
+
+<!-- Her kan du skrive tekst som kommer i bunden af siden -->
