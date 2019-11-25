@@ -1,11 +1,20 @@
-# Welcome to GitHub Pages
+# Welcome
 
-You can use the [editor on GitHub](https://github.com/tofteapp/imageapp/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-## Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing.
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+<div id="imageshere" />
+<script>
+  var url = "https://raw.githubusercontent.com/tofteapp/imageapp/master/";
+  var exts = ["jpg", "JPG", "jpeg", "JPEG", "png", "PNG", "gif"];
+  var imageNotFound = function () {
+    this.hidden = true;
+  }
+  
+  for (var i=1; i<=10; i++) {
+    for (var j=0; j<exts.length; j++) {
+      var img = new Image();
+      img.addEventListener('error', imageNotFound);
+      img.src = url + i + "." + exts[j];
+      document.getElementById("imageshere").appendChild(img);
+      document.getElementById("imageshere").appendChild(document.createElement("BR"));
+    }
+  }
+</script>
